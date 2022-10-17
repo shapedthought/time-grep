@@ -34,7 +34,7 @@ Search for an email string, modified in the last hour
 
     time-grep.exe -p /path/to/search -s "(\w+)@(\w+).(\w+)" -m 60
 
-Search for "Error" and "Warning", modified in the last 20 min
+Search for "Error" or "Warning", modified in the last 20 min
 
     time-grep.exe -p /path/to/search -s "\bWarning\b|\bError\b" -m 20
 
