@@ -18,7 +18,7 @@ It uses regular expressions (Regex) for the pattern search terms.
     
 Find the expression "17:10:2022 this is an Error", searching for the timestamp and "Error" string, modified in the last 30 min
 
-    time-grep.exe --path /path/to/search --search-term "17:10:2022(\s([a-zA-Z]+\s)+)Error" --mins 30 
+    time-grep.exe --path /path/to/search --search-term "^.*?\b17.10.2022\b.*?\bError\b.*?$" --mins 30 
 
 Find "Error" anywhere in the string, modified in the last 30 min
 
