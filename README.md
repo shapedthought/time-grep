@@ -16,9 +16,13 @@ It uses regular expressions (Regex) for the pattern search terms.
 
 ## Examples
     
-Find the expression "17:10:2022 this is an Error", searching for the timestamp and "Error" string, modified in the last 30 min
+Find the expression "17.10.2022 this is an Error", searching for the timestamp and "Error" string, modified in the last 30 min
 
     time-grep.exe --path /path/to/search --search-term "^.*?\b17.10.2022\b.*?\bError\b.*?$" --mins 30 
+
+There is a log file with the structure "17.10.2022 08:32:11 this is an Error". We want to find all entries for 17.10.2022 at 8am, with the file modified in the last 30 min
+
+    time-grep.exe -p /path/to/search -s "^.*?\b17.10.2022\b.*?\s08:.*?\bError\b" -m 30
 
 Find "Error" anywhere in the string, modified in the last 30 min
 
